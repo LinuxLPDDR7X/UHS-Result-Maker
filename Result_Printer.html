@@ -422,9 +422,47 @@
                 justify-content: space-between;
             }
 
+            .student-details {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                gap: 24px !important;
+            }
+
+            .student-details > div {
+                width: 48% !important;
+            }
+
+            .summary-box {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 14px !important;
+            }
+
+            .summary-box > div {
+                width: 33% !important;
+            }
+
+            .summary-box h3,
+            .summary-box p {
+                white-space: nowrap !important;
+            }
+
             .signatures {
                 margin-top: auto;
                 padding-top: 38px;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: flex-end !important;
+                gap: 80px !important;
+            }
+
+            .signatures div {
+                width: 48% !important;
             }
         }
     </style>

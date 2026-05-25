@@ -1,0 +1,337 @@
+{
+    "schema_version": 2,
+    "categories": {
+        "9": [
+            {
+                "name": "Hindi / Urdu",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Sanskrit",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Mathematics",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Science",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Social Science",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "English",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Excluded"
+            }
+        ],
+        "10": [
+            {
+                "name": "Hindi / Urdu",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Sanskrit",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Mathematics",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Science",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Social Science",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "English",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Excluded"
+            }
+        ],
+        "11_Science": [
+            {
+                "name": "Hindi / Urdu",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "English",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Mathematics",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Physics",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Chemistry",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Biology",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            }
+        ],
+        "11_Arts": [
+            {
+                "name": "Geography",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "History",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Political Science",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Psychology",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Home Science",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Economics",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Sociology",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            }
+        ],
+        "12_Science": [
+            {
+                "name": "Hindi / Urdu",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "English",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Mathematics",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Physics",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Chemistry",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Biology",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            }
+        ],
+        "12_Arts": [
+            {
+                "name": "Geography",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "History",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Political Science",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Psychology",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Home Science",
+                "theory_full": 70,
+                "theory_pass": 21,
+                "practical_full": 30,
+                "practical_pass": 9,
+                "default_status": "Included"
+            },
+            {
+                "name": "Economics",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Sociology",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "Hindi",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            },
+            {
+                "name": "English",
+                "theory_full": 100,
+                "theory_pass": 30,
+                "practical_full": 0,
+                "practical_pass": 0,
+                "default_status": "Included"
+            }
+        ]
+    }
+}

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UHS Rank List</title>
+    <style>
+        :root {
+            --ink: #1e2f40;
+            --brand: #154c79;
+            --brand-soft: #deebf7;
+            --accent: #2a7c5f;
+            --warn: #bf3f3f;
+            --paper: #ffffff;
+            --bg-a: #edf4fb;
+            --bg-b: #dce8f4;
+            --line: #c9d5e3;
+            --gold-a: #fff6cc;
+            --gold-b: #ffe08a;
+            --silver-a: #eef2f6;
+            --silver-b: #dce2e8;
+            --bronze-a: #f8e1cf;
+            --bronze-b: #ecc39e;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--ink);
+            background: radial-gradient(circle at 15% 10%, var(--bg-a), var(--bg-b) 55%, #cfdceb 100%);
+            padding: 22px;
+            text-align: center;
+        }
+
+        .sheet-wrap {
+            margin-bottom: 40px;
+        }
+
+        .sheet {
+            max-width: 1080px;
+            margin: 16px auto 0;
+            background-color: var(--paper);
+            border: 4px solid var(--brand);
+            border-radius: 20px;
+            padding: 34px;
+            text-align: left;
+            box-shadow: 0 16px 34px rgba(21, 76, 121, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sheet::before {
+            content: "";
+            position: absolute;
+            top: 18%;
+            left: 19%;
+            width: 62%;
+            height: 62%;
+            background: url('https://expediensolutions.com/wp-content/uploads/2021/12/BSEB-logo.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.07;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content-z {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 18px;
+            border-bottom: 2px solid var(--brand);
+            padding-bottom: 14px;
+        }
+
+        .header h1 {
+            color: #10273c;
+            font-size: 1.85rem;
+            margin: 0 0 6px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-weight: 800;
+            font-family: "Cambria", "Times New Roman", serif;
+        }
+
+        .header p {
+            margin: 3px 0;
+            color: #36495f;
+            font-size: 0.96rem;
+        }
+
+        .exam-title-container {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .exam-title {
+            background-color: var(--brand);
+            color: white;
+            padding: 8px 26px;
+            display: inline-block;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.96rem;
+            letter-spacing: 0.8px;
+        }
+
+        .context-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            background: #f8fbff;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #d8e4f0;
+        }
+
+        .headline {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            background-color: var(--brand-soft);
+            border: 2px solid var(--brand);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+            align-items: stretch;
+            margin-bottom: 20px;
+        }
+
+        .headline-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.74);
+            border-radius: 12px;
+            padding: 14px 10px;
+        }
+
+        .headline-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.77rem;
+            color: var(--brand);
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
+
+        .headline-card p {
+            margin: 0;
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: #23394f;
+        }
+
+        .subsection-title {
+            margin: 18px 0 10px 0;
+            color: var(--brand);
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 18px;
+            background: white;
+            font-size: 0.92rem;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--line);
+            padding: 10px 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: var(--brand);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.74rem;
+            letter-spacing: 0.6px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fbff;
+        }
+
+        .rank-row.podium td {
+            font-weight: 700;
+        }
+
+        .podium-gold {
+            background: linear-gradient(90deg, var(--gold-a), var(--gold-b)) !important;
+        }
+
+        .podium-silver {
+            background: linear-gradient(90deg, var(--silver-a), var(--silver-b)) !important;
+        }
+
+        .podium-bronze {
+            background: linear-gradient(90deg, var(--bronze-a), var(--bronze-b)) !important;
+        }
+
+        .name-cell,
+        .remarks-cell {
+            text-align: left;
+        }
+
+        .percent-cell {
+            font-weight: 800;
+            color: var(--brand);
+        }
+
+        .note {
+            margin-top: 8px;
+            color: #4a6279;
+            font-size: 0.88rem;
+        }
+
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 72px;
+            font-size: 0.93rem;
+            font-weight: 700;
+            color: var(--brand);
+            gap: 28px;
+        }
+
+        .signatures div {
+            text-align: center;
+            width: 270px;
+            border-top: 2px solid var(--brand);
+            padding-top: 12px;
+        }
+
+        .action-btns {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 11px 20px;
+            font-size: 0.97rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            color: white;
+            font-weight: 700;
+            min-width: 160px;
+        }
+
+        .btn-print {
+            background: linear-gradient(145deg, #309563, var(--accent));
+        }
+
+        .btn-close {
+            background: linear-gradient(145deg, #d45353, var(--warn));
+        }
+
+        @media (max-width: 980px) {
+            body {
+                padding: 12px;
+            }
+
+            .sheet {
+                padding: 20px 16px;
+                border-width: 3px;
+                border-radius: 14px;
+            }
+
+            .context-box,
+            .headline,
+            .signatures {
+                flex-direction: column;
+            }
+        }
+
+        @media print {
+            body,
+            .sheet,
+            .exam-title,
+            th,
+            .headline,
+            tr:nth-child(even),
+            .context-box,
+            .podium-gold,
+            .podium-silver,
+            .podium-bronze {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+
+            .action-btns {
+                display: none !important;
+            }
+
+            @page {
+                size: A4 portrait;
+                margin: 12mm;
+            }
+
+            .sheet-wrap {
+                margin-bottom: 0;
+            }
+
+            .sheet {
+                border: 4px solid var(--brand) !important;
+                border-radius: 20px !important;
+                box-shadow: none !important;
+                margin: 0 auto !important;
+                padding: 26px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+                min-height: 96vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sheet-wrap">
+        <div class="sheet">
+            <div class="content-z">
+                <div class="header">
+                    <h1>UHS Saraitand</h1>
+                    <p>Student Merit Register and Rank Sheet</p>
+                    <p>Generated on 24-05-2026 06:55 PM</p>
+                </div>
+
+                <div class="exam-title-container">
+                    <div class="exam-title">Monthly Examination</div>
+                </div>
+
+                <div class="context-box">
+                    <div>
+                        <strong>Class / Stream:</strong> Class 9<br>
+                        <strong>Academic Year:</strong> 2025-2026<br>
+                        <strong>Topper:</strong> Kiran Kumari (70.80%)
+                    </div>
+                    <div>
+                        <strong>Ranked Records:</strong> 2<br>
+                        <strong>Unranked Records:</strong> 2<br>
+                        <strong>Total Records:</strong> 4
+                    </div>
+                </div>
+
+                <div class="headline">
+                    <div class="headline-card">
+                        <h3>Gold</h3>
+                        <p>Kiran Kumari</p>
+                    </div>
+                    <div class="headline-card">
+                        <h3>Silver</h3>
+                        <p>Bobby</p>
+                    </div>
+                    <div class="headline-card">
+                        <h3>Bronze</h3>
+                        <p>Not Available</p>
+                    </div>
+                </div>
+
+                <div class="subsection-title">Ranked Students</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Badge</th>
+                            <th>Roll</th>
+                            <th>Reg No</th>
+                            <th>Student Name</th>
+                            <th>Total</th>
+                            <th>Max</th>
+                            <th>Percentage</th>
+                            <th>Result</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="rank-row podium podium-gold">
+                        <td>1</td>
+                        <td>🥇 #1</td>
+                        <td>790</td>
+                        <td>MOCK2509011</td>
+                        <td class="name-cell">Kiran Kumari</td>
+                        <td>354</td>
+                        <td>500</td>
+                        <td class="percent-cell">70.80%</td>
+                        <td>PASS (1st Division)</td>
+                        <td class="remarks-cell"></td>
+                    </tr>
+                    <tr class="rank-row podium podium-silver">
+                        <td>2</td>
+                        <td>🥈 #2</td>
+                        <td>789</td>
+                        <td>456123</td>
+                        <td class="name-cell">Bobby</td>
+                        <td>350</td>
+                        <td>500</td>
+                        <td class="percent-cell">70.00%</td>
+                        <td>PASS (1st Division)</td>
+                        <td class="remarks-cell"></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                
+            <div class="subsection-title">Records Listed But Not Ranked</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Badge</th>
+                        <th>Roll</th>
+                        <th>Reg No</th>
+                        <th>Student Name</th>
+                        <th>Total</th>
+                        <th>Max</th>
+                        <th>Percentage</th>
+                        <th>Result</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="rank-row">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>791</td>
+                        <td>MOCK2509012</td>
+                        <td class="name-cell">Sahil Raj</td>
+                        <td>231</td>
+                        <td>500</td>
+                        <td class="percent-cell">46.20%</td>
+                        <td>FAIL</td>
+                        <td class="remarks-cell">Failed: Hindi / Urdu</td>
+                    </tr>
+                    <tr class="rank-row">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>792</td>
+                        <td>MOCK2509013</td>
+                        <td class="name-cell">Pihu Kumari</td>
+                        <td>304</td>
+                        <td>400</td>
+                        <td class="percent-cell">76.00%</td>
+                        <td>INCOMPLETE</td>
+                        <td class="remarks-cell">Missing: Social Science</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+                <div class="note">Top three ranks are highlighted with medal badges. Only complete pass records are assigned ranks.</div>
+
+                <div class="signatures">
+                    <div>Class Teacher / Examiner</div>
+                    <div>Headmaster / Principal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-btns">
+        <button class="btn btn-print" onclick="window.print()">Print / PDF</button>
+        <button class="btn btn-close" onclick="window.close()">Close</button>
+    </div>
+</body>
+</html>
